@@ -9,7 +9,9 @@ controllerbuild:
   enabled: true
 controllerworkflow:
   enabled: false
-dockerRegistry: 294950379691.dkr.ecr.ap-northeast-2.amazonaws.com
+docker-registry:
+  enabled: false
+dockerRegistry: gcr.io
 expose:
   Annotations:
     helm.sh/hook: post-install,post-upgrade
@@ -18,7 +20,7 @@ expose:
   - --v
   - 4
   config:
-    domain: 54.180.195.234.nip.io
+    domain: 35.200.12.120.nip.io
     exposer: Ingress
     http: "true"
 jenkins:
